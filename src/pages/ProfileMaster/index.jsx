@@ -38,12 +38,12 @@ class SignIn extends Component {
         const element = document.createElement('a');
         element.setAttribute('href', dataUrl);
         element.setAttribute('download', 'profile-master.png');
-    
+
         element.style.display = 'none';
         document.body.appendChild(element);
-    
+
         element.click();
-    
+
         document.body.removeChild(element);
     }
 
@@ -58,7 +58,7 @@ class SignIn extends Component {
         return (
             <Container className="App">
                 {this.state.isSignedIn ? (
-                <span>                    
+                <span>
                     <Frame id="capture">
                         <img
                             src={firebase.auth().currentUser.photoURL}

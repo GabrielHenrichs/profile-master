@@ -56,7 +56,7 @@ export const Frame = styled.div`
         right: 0;
         display: flex;
         align-items: center;
-        
+
         img {
             width: 107px;
             height: 55px;

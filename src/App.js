@@ -1,16 +1,15 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 
-import Routes from './routes';
+import ProfileMaster from './pages/ProfileMaster';
 
 import GlobalStyle from './styles/global';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes />
+    <>
+      <ProfileMaster />
       <GlobalStyle />
-    </BrowserRouter>
+    </>
   );
 }
 
