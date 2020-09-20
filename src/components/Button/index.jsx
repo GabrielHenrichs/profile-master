@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import { Container } from './styles';
+import { Container } from './styles'
 
 const Button = ({ children, ...rest }) => (
-    <Container type="button" {...rest}>
-        {children}
-    </Container>
-);
+  <Container type='button' {...rest}>
+    {children}
+  </Container>
+)
 
-export default Button;
+export default Button
