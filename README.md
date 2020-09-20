@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save profile-master-generator
+npm install --save profile-master
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ npm install --save profile-master-generator
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'profile-master-generator'
-import 'profile-master-generator/dist/index.css'
+import MyComponent from 'profile-master'
+import 'profile-master/dist/index.css'
 
 class Example extends Component {
   render() {
