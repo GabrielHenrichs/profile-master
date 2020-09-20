@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
-import { Frame, Button } from './styles';
+import { Frame, ButtonContainer, Container, AuthScreen } from './styles';
 import Logo from '../../assets/gdgjf.png';
 
 import html2canvas from 'html2canvas';
+
+import Button from '../../components/Button';
 
 firebase.initializeApp({
     apiKey: "AIzaSyDflrkP2uTFEkOtT_KDRcDPgjjDvFd9MQE",
@@ -54,11 +56,9 @@ class SignIn extends Component {
 
     render() {
         return (
-            <div className="App">
+            <Container className="App">
                 {this.state.isSignedIn ? (
-                <span>
-                    <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
-                    
+                <span>                    
                     <Frame id="capture">
                         <img
                             src={firebase.auth().currentUser.photoURL}
@@ -73,15 +73,27 @@ class SignIn extends Component {
                         </div>
                     </Frame>
 
-                    <Button onClick={() => this.handleDownload()}>Download</Button>
+                    <ButtonContainer>
+                        <Button onClick={() => this.handleDownload()}>Download</Button>
+
+                        <Button onClick={() => firebase.auth().signOut()}>Sign out!</Button>
+                    </ButtonContainer>
                 </span>
                 ) : (
-                <StyledFirebaseAuth
-                    uiConfig={this.uiConfig}
-                    firebaseAuth={firebase.auth()}
-                />
+                    <AuthScreen>
+                        <div>
+                            <h1>ProfileMaster</h1>
+
+                            <p>Faça a autenticação para obter sua moldura!</p>
+                        </div>
+
+                        <StyledFirebaseAuth
+                            uiConfig={this.uiConfig}
+                            firebaseAuth={firebase.auth()}
+                        />
+                    </AuthScreen>
                 )}
-            </div>
+            </Container>
         )
     };
 }

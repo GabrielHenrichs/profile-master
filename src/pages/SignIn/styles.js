@@ -1,5 +1,37 @@
 import styled from 'styled-components';
 
+export const AuthScreen = styled.div`
+    height: 472px;
+    width: 400px;
+    background: #5484f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 52px;
+        }
+
+        p {
+            font-weight: 300;
+        }
+    }
+`;
+
+export const Container = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 export const Frame = styled.div`
     height: 400px;
     width: 400px;
@@ -50,6 +82,8 @@ export const Frame = styled.div`
     }
 `;
 
-export const Button = styled.button`
-    margin-top: 10px;
+export const ButtonContainer = styled.div`
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
 `;
