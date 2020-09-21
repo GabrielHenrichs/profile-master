@@ -6,6 +6,8 @@
 
 ProfileMaster: https://profile-master-generator.vercel.app/
 
+Repositório para deploy: https://github.com/GabrielHenrichs/profile-master-generator
+
 GDG Juiz de Fora: https://gdgjf.github.io/
 
 App Masters: https://appmasters.io/
