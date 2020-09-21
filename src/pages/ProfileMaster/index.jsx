@@ -15,7 +15,7 @@ firebase.initializeApp({
   authDomain: 'profilemaster-b369d.firebaseapp.com'
 })
 
-class SignIn extends Component {
+class ProfileMaster extends Component {
   state = { isSignedIn: false, downloadURL: '' }
 
   uiConfig = {
@@ -102,4 +102,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn
+export default ProfileMaster;

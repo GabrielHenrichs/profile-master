@@ -127,10 +127,10 @@ firebase.initializeApp({
   authDomain: 'profilemaster-b369d.firebaseapp.com'
 });
 
-var SignIn = /*#__PURE__*/function (_Component) {
-  _inheritsLoose(SignIn, _Component);
+var ProfileMaster = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(ProfileMaster, _Component);
 
-  function SignIn() {
+  function ProfileMaster() {
     var _this;
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -163,7 +163,7 @@ var SignIn = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  var _proto = SignIn.prototype;
+  var _proto = ProfileMaster.prototype;
 
   _proto.download = function download(dataUrl) {
     var element = document.createElement('a');
@@ -217,7 +217,7 @@ var SignIn = /*#__PURE__*/function (_Component) {
     })));
   };
 
-  return SignIn;
+  return ProfileMaster;
 }(React.Component);
 
 function _templateObject$2() {
@@ -232,7 +232,7 @@ function _templateObject$2() {
 var GlobalStyle = styled.createGlobalStyle(_templateObject$2());
 
 var ExampleComponent = function ExampleComponent() {
-  return /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement(SignIn, null), /*#__PURE__*/React__default.createElement(GlobalStyle, null));
+  return /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement(ProfileMaster, null), /*#__PURE__*/React__default.createElement(GlobalStyle, null));
 };
 
 exports.ExampleComponent = ExampleComponent;
