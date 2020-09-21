@@ -235,5 +235,5 @@ var ExampleComponent = function ExampleComponent() {
   return /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement(ProfileMaster, null), /*#__PURE__*/React__default.createElement(GlobalStyle, null));
 };
 
-exports.ExampleComponent = ExampleComponent;
+module.exports = ExampleComponent;
 //# sourceMappingURL=index.js.map

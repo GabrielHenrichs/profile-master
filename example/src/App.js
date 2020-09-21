@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { ExampleComponent } from 'profile-master'
-import 'profile-master/dist/index.css'
+import ExampleComponent from 'profile-master'
 
 const App = () => {
   return <ExampleComponent text="Create React Library Example 😄" />
