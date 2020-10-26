@@ -49,6 +49,14 @@ function _objectWithoutPropertiesLoose(source, excluded) {
   return target;
 }
 
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
 function _taggedTemplateLiteralLoose(strings, raw) {
   if (!raw) {
     raw = strings.slice(0);
@@ -122,45 +130,19 @@ var Button = function Button(_ref) {
   }, rest), children);
 };
 
-firebase.initializeApp({
-  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN
-});
-
 var ProfileMaster = /*#__PURE__*/function (_Component) {
   _inheritsLoose(ProfileMaster, _Component);
 
-  function ProfileMaster() {
+  function ProfileMaster(_ref) {
     var _this;
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
-    _this.state = {
-      isSignedIn: false,
-      downloadURL: ''
-    };
-    _this.uiConfig = {
-      signInFlow: 'popup',
-      signInOptions: [firebase.auth.GithubAuthProvider.PROVIDER_ID],
-      callbacks: {
-        signInSuccess: function signInSuccess() {
-          return false;
-        }
-      }
-    };
-
-    _this.componentDidMount = function () {
-      firebase.auth().onAuthStateChanged(function (user) {
-        _this.setState({
-          isSignedIn: !!user
-        });
-      });
-    };
-
-    return _this;
+    var apiKey = _ref.apiKey,
+        authDomain = _ref.authDomain;
+    firebase.initializeApp({
+      apiKey: apiKey,
+      authDomain: authDomain
+    });
+    return _assertThisInitialized(_this);
   }
 
   var _proto = ProfileMaster.prototype;
@@ -231,8 +213,10 @@ function _templateObject$2() {
 }
 var GlobalStyle = styled.createGlobalStyle(_templateObject$2());
 
-var ExampleComponent = function ExampleComponent() {
-  return /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement(ProfileMaster, null), /*#__PURE__*/React__default.createElement(GlobalStyle, null));
+var ExampleComponent = function ExampleComponent(_ref) {
+  var rest = _extends({}, _ref);
+
+  return /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement(ProfileMaster, rest), /*#__PURE__*/React__default.createElement(GlobalStyle, null));
 };
 
 module.exports = ExampleComponent;
