@@ -123,8 +123,8 @@ var Button = function Button(_ref) {
 };
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyDflrkP2uTFEkOtT_KDRcDPgjjDvFd9MQE',
-  authDomain: 'profilemaster-b369d.firebaseapp.com'
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN
 });
 
 var ProfileMaster = /*#__PURE__*/function (_Component) {
